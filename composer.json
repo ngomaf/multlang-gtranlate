@@ -1,0 +1,15 @@
+{
+    "name": "ngoma/multilang",
+    "autoload": {
+        "psr-4": {
+            "Ngoma\\Multilang\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ngoma Fortuna",
+            "email": "ngomafortuna@gmail.com"
+        }
+    ],
+    "require": {}
+}

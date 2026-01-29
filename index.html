@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Início - EcoTech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TRADUTOR -->
+<div id="top-bar">
+    <div id="google_translate_element"></div>
+</div>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+</nav>
+
+<main>
+    <h2>Sobre a EcoTech Solutions</h2>
+    <p>A EcoTech Solutions é uma empresa inovadora especializada no desenvolvimento de tecnologias sustentáveis para um futuro mais verde. Fundada em 2015, nossa missão é criar soluções práticas que ajudem empresas e comunidades a reduzir seu impacto ambiental enquanto mantêm a eficiência operacional.</p>
+    <p>Com sede em São Paulo e atuação em todo o território nacional, já implementamos mais de 200 projetos de eficiência energética, gestão de resíduos e energia renovável. Nossa equipe multidisciplinar combina expertise técnica com compromisso ambiental para entregar resultados mensuráveis.</p>
+    <p>Acreditamos que inovação e sustentabilidade devem caminhar juntas. Por isso, investimos constantemente em pesquisa e desenvolvimento de novas tecnologias que possam transformar desafios ambientais em oportunidades de crescimento responsável.</p>
+
+    <h2>Nossa Abordagem</h2>
+    <p>Desenvolvemos soluções personalizadas após uma análise detalhada das necessidades e do contexto de cada cliente. Utilizamos metodologias comprovadas e tecnologias de ponta para garantir que nossos projetos não apenas atendam, mas superem as expectativas de desempenho ambiental.</p>
+    <p>Nossos consultores especializados realizam auditorias completas para identificar oportunidades de melhoria em três áreas principais: eficiência energética, gestão inteligente de recursos e implementação de fontes renováveis. Cada projeto é acompanhado de métricas claras para monitoramento contínuo dos resultados.</p>
+    <p>A transparência é um valor fundamental em nossa atuação. Mantemos nossos clientes informados em todas as etapas do processo e fornecemos relatórios detalhados sobre o impacto ambiental positivo gerado por nossas soluções.</p>
+</main>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'pt',
+            includedLanguages: 'pt,kg,en,es,zh-CN,ru,de',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Esconder a barra superior do Google Translate
+    var gtFrame = document.querySelector('.goog-te-banner-frame.skiptranslate');
+    if (gtFrame) {
+        gtFrame.style.display = 'none';
+    }
+    document.querySelector('.VIpgjd-ZVi9od-ORHbe.table').style.display = 'none';
+});
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

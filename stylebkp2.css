@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#top-bar {
+    background: #f2f2f2;
+    padding: 10px;
+    text-align: right;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Google Translate - NÃO esconder nada */
+.goog-te-gadget {
+    font-size: 14px;
+    color: #000 !important;
+}
+
+.goog-te-combo {
+    padding: 4px;
+}
+
+/* ===== GOOGLE TRANSLATE - PERSONALIZAÇÃO ===== */
+
+/* Remove o banner azul do Google */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Esconde o texto "Powered by Google" */
+.goog-te-gadget span {
+    display: none !important;
+}
+
+/* Mantém SOMENTE o seletor */
+.goog-te-gadget {
+    font-size: 0;
+}
+
+/* Estilo do dropdown */
+.goog-te-combo {
+    font-size: 14px !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Remove o ícone do Google */
+.goog-logo-link {
+    display: none !important;
+}
+
+/* Corrige layout */
+#google_translate_element {
+    display: inline-block;
+}
+

@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#top-bar {
+    background: #f2f2f2;
+    padding: 10px;
+    text-align: right;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Google Translate - NÃO esconder nada */
+.goog-te-gadget {
+    font-size: 14px;
+    color: #000 !important;
+}
+
+.goog-te-combo {
+    padding: 4px;
+}
