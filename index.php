@@ -7,13 +7,14 @@
 </head>
 <body>
 
-<div id="top-bar">
-    <div id="google_translate_element"></div>
-</div>
-
 <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
+    <div class="nav-container">
+        <div class="nav-links">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+        </div>
+        <div id="google_translate_element" class="translate-select"></div>
+    </div>
 </nav>
 
 <main>
@@ -32,8 +33,8 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement(
         {
-            pageLanguage: 'pt',
-            includedLanguages: 'pt,kg,en,es,zh-CN,ru,de',
+            pageLanguage: 'pt-pt',
+            includedLanguages: 'pt-pt,kg,en,es,zh-CN,ru,de',
             autoDisplay: false
         },
         'google_translate_element'
