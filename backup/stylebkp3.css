@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#top-bar {
+    background: #f2f2f2;
+    padding: 10px;
+    text-align: right;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Google Translate - NÃO esconder nada */
+.goog-te-gadget {
+    font-size: 14px;
+    color: #000 !important;
+}
+
+.goog-te-combo {
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+/* ===== GOOGLE TRANSLATE - MOSTRAR SÓ O SELECT ===== */
+
+.VIpgjd-ZVi9od-ORHbe {
+    display: none !important;
+}
+
+/* Remove a barra horizontal superior */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Remove o texto "Powered by Google" */
+/* .goog-te-gadget span {
+    display: none !important;
+} */
+
+/* Remove o logo do Google */
+.goog-logo-link {
+    display: none !important;
+}
+
+/* GARANTE que o select fique visível */
+.goog-te-combo {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* Container visível */
+#google_translate_element {
+    display: inline-block !important;
+}
