@@ -1,3 +1,6 @@
+Parece que só repetiste o código anterior. Vou repetir: "No código que se segue usa o google translate. Preciso que alteres o select para usar forma curta dos idiomas (exemplo: pt, en, es). isto é no front-end deve aparecer apenas pt, en .... Use apenas quatro idomas Português (padrão), Inglês, Espanhol e Chines. coleque select com texto preto, sem fundo e sem borda."
+
+html
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -13,12 +16,7 @@
             <a href="/">Início</a>
             <a href="sobre.php">Sobre</a>
         </div>
-        <select id="language-select" onchange="changeLanguage(this.value)">
-            <option value="pt" selected>PT</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="zh-CN">ZH</option>
-        </select>
+        <div id="google_translate_element" class="translate-select"></div>
     </div>
 </nav>
 
@@ -61,41 +59,16 @@
     
 </main>
 
-<div id="google_translate_element" style="display: none;"></div>
-
 <script>
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'pt',
-        includedLanguages: 'pt,en,es,zh-CN',
-        autoDisplay: false
-    }, 'google_translate_element');
-}
-
-function changeLanguage(lang) {
-    if (lang === 'pt') {
-        // Recarrega a página para voltar ao português (remove cookie de tradução)
-        var domain = window.location.hostname;
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domain;
-        location.reload();
-    } else {
-        // Trigger Google Translate
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-            select.value = lang;
-            select.dispatchEvent(new Event('change'));
-        } else {
-            // Se o widget ainda não carregou, aguarda e tenta novamente
-            setTimeout(function() {
-                var select = document.querySelector('.goog-te-combo');
-                if (select) {
-                    select.value = lang;
-                    select.dispatchEvent(new Event('change'));
-                }
-            }, 1000);
-        }
-    }
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'pt-pt',
+            includedLanguages: 'pt-pt,kg,en,es,zh-CN,ru,de',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
 }
 </script>
 
@@ -103,3 +76,112 @@ function changeLanguage(lang) {
 
 </body>
 </html>
+
+
+
+css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    background: #333;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== GOOGLE TRANSLATE - PERSONALIZADO ===== */
+
+/* Container do seletor */
+#google_translate_element {
+    display: inline-block !important;
+}
+
+/* Remove a barra horizontal superior */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Remove o texto "Powered by Google" e o logo */
+.goog-te-gadget span,
+.goog-logo-link,
+.goog-logo-link img,
+.goog-te-gadget img {
+    display: none !important;
+}
+
+.VIpgjd-ZVi9od-ORHbe {
+    display: none !important;
+}
+
+/* Estilização do select - COR VERDE */
+.goog-te-combo {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* Estilo personalizado */
+    background-color: #4CAF50 !important;  /* Verde principal */
+    color: white !important;
+    font-size: 14px;
+    padding: 8px 15px !important;
+    border-radius: 5px !important;
+    border: 2px solid #45a049 !important;  /* Verde mais escuro para a borda */
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    outline: none !important;
+    width: auto !important;
+    min-width: 150px !important;
+}
+
+/* Hover effect */
+.goog-te-combo:hover {
+    background-color: #45a049 !important;  /* Verde mais escuro no hover */
+    border-color: #3d8b40 !important;
+}
+
+/* Focus effect */
+.goog-te-combo:focus {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5) !important;
+}
+
+/* Estilo das opções do dropdown */
+.goog-te-combo option {
+    background-color: white !important;
+    color: #333 !important;
+    padding: 10px !important;
+}
+
+/* Remove qualquer espaço extra */
+.goog-te-gadget {
+    font-size: 0 !important;  /* Remove espaços dos elementos escondidos */
+    line-height: normal !important;
+}
