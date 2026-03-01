@@ -32,74 +32,47 @@ main {
     margin: 0 auto;
 }
 
-/* ===== GOOGLE TRANSLATE - PERSONALIZADO ===== */
+/* ===== SELECT DE IDIOMAS - ESTILO LIMPO ===== */
 
-/* Container do seletor */
-#google_translate_element {
-    display: inline-block !important;
+#language-select {
+    /* Remove estilos padrão */
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    
+    /* Remove seta padrão em alguns navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* Largura mínima para as siglas */
+    min-width: 50px;
+    text-align: center;
 }
 
-/* Remove a barra horizontal superior */
+/* Hover effect */
+#language-select:hover {
+    color: #333;
+}
+
+/* Estilo das opções */
+#language-select option {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* Remove a barra do Google Translate */
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
 
 body {
     top: 0 !important;
-}
-
-/* Remove o texto "Powered by Google" e o logo */
-.goog-te-gadget span,
-.goog-logo-link,
-.goog-logo-link img,
-.goog-te-gadget img {
-    display: none !important;
-}
-
-.VIpgjd-ZVi9od-ORHbe {
-    display: none !important;
-}
-
-/* Estilização do select - COR VERDE */
-.goog-te-combo {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    
-    /* Estilo personalizado */
-    background-color: #4CAF50 !important;  /* Verde principal */
-    color: white !important;
-    font-size: 14px;
-    padding: 8px 15px !important;
-    border-radius: 5px !important;
-    border: 2px solid #45a049 !important;  /* Verde mais escuro para a borda */
-    cursor: pointer !important;
-    font-weight: 500 !important;
-    outline: none !important;
-    width: auto !important;
-    min-width: 150px !important;
-}
-
-/* Hover effect */
-.goog-te-combo:hover {
-    background-color: #45a049 !important;  /* Verde mais escuro no hover */
-    border-color: #3d8b40 !important;
-}
-
-/* Focus effect */
-.goog-te-combo:focus {
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5) !important;
-}
-
-/* Estilo das opções do dropdown */
-.goog-te-combo option {
-    background-color: white !important;
-    color: #333 !important;
-    padding: 10px !important;
-}
-
-/* Remove qualquer espaço extra */
-.goog-te-gadget {
-    font-size: 0 !important;  /* Remove espaços dos elementos escondidos */
-    line-height: normal !important;
 }

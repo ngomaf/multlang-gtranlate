@@ -1,4 +1,4 @@
-Parece que só repetiste o código anterior. Vou repetir: "No código que se segue usa o google translate. Preciso que alteres o select para usar forma curta dos idiomas (exemplo: pt, en, es). isto é no front-end deve aparecer apenas pt, en .... Use apenas quatro idomas Português (padrão), Inglês, Espanhol e Chines. coleque select com texto preto, sem fundo e sem borda."
+Funcionou muito bem agora eu que substituir os idiomas por bandeiras ou icones de bandeiras
 
 html
 <!DOCTYPE html>

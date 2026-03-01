@@ -32,40 +32,54 @@ main {
     margin: 0 auto;
 }
 
-/* ===== SELECT DE IDIOMAS - ESTILO LIMPO ===== */
+/* ===== SELECT COM BANDEIRAS ===== */
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
 
 #language-select {
     /* Remove estilos padrão */
     background-color: transparent;
     border: none;
     color: #000;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 5px 10px;
+    font-size: 20px;
     cursor: pointer;
     outline: none;
+    padding: 5px 25px 5px 10px;
     
-    /* Remove seta padrão em alguns navegadores */
+    /* Mostra apenas a bandeira selecionada */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     
-    /* Largura mínima para as siglas */
-    min-width: 50px;
-    text-align: center;
+    /* Largura mínima para a bandeira */
+    min-width: 60px;
+}
+
+/* Seta customizada */
+.custom-select::after {
+    content: '▼';
+    font-size: 10px;
+    color: #000;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 /* Hover effect */
 #language-select:hover {
-    color: #333;
+    opacity: 0.8;
 }
 
-/* Estilo das opções */
+/* Estilo das opções no dropdown */
 #language-select option {
-    background-color: #fff;
-    color: #000;
-    font-weight: 600;
+    font-size: 20px;
     padding: 10px;
+    background-color: #fff;
 }
 
 /* Remove a barra do Google Translate */
