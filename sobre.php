@@ -13,12 +13,14 @@
             <a href="/">Início</a>
             <a href="sobre.php">Sobre</a>
         </div>
-        <select id="language-select" onchange="changeLanguage(this.value)">
-            <option value="pt" selected>PT</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="zh-CN">ZH</option>
-        </select>
+        <div class="custom-select">
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="pt" selected>🇵🇹 PT</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="zh-CN">🇨🇳 ZH</option>
+            </select>
+        </div>
     </div>
 </nav>
 
@@ -74,7 +76,7 @@ function googleTranslateElementInit() {
 
 function changeLanguage(lang) {
     if (lang === 'pt') {
-        // Recarrega a página para voltar ao português (remove cookie de tradução)
+        // Recarrega a página para voltar ao português
         var domain = window.location.hostname;
         document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
         document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domain;
@@ -86,7 +88,6 @@ function changeLanguage(lang) {
             select.value = lang;
             select.dispatchEvent(new Event('change'));
         } else {
-            // Se o widget ainda não carregou, aguarda e tenta novamente
             setTimeout(function() {
                 var select = document.querySelector('.goog-te-combo');
                 if (select) {

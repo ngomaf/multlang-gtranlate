@@ -13,12 +13,7 @@
             <a href="/">Início</a>
             <a href="sobre.php">Sobre</a>
         </div>
-        <select id="language-select" onchange="changeLanguage(this.value)">
-            <option value="pt" selected>PT</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="zh-CN">ZH</option>
-        </select>
+        <div id="google_translate_element" class="translate-select"></div>
     </div>
 </nav>
 
@@ -61,41 +56,16 @@
     
 </main>
 
-<div id="google_translate_element" style="display: none;"></div>
-
 <script>
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'pt',
-        includedLanguages: 'pt,en,es,zh-CN',
-        autoDisplay: false
-    }, 'google_translate_element');
-}
-
-function changeLanguage(lang) {
-    if (lang === 'pt') {
-        // Recarrega a página para voltar ao português (remove cookie de tradução)
-        var domain = window.location.hostname;
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
-        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domain;
-        location.reload();
-    } else {
-        // Trigger Google Translate
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-            select.value = lang;
-            select.dispatchEvent(new Event('change'));
-        } else {
-            // Se o widget ainda não carregou, aguarda e tenta novamente
-            setTimeout(function() {
-                var select = document.querySelector('.goog-te-combo');
-                if (select) {
-                    select.value = lang;
-                    select.dispatchEvent(new Event('change'));
-                }
-            }, 1000);
-        }
-    }
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'pt-pt',
+            includedLanguages: 'pt-pt,kg,en,es,zh-CN,ru,de',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
 }
 </script>
 

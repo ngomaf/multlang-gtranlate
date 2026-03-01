@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    background: #333;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== GOOGLE TRANSLATE - PERSONALIZADO ===== */
+
+/* Container do seletor */
+#google_translate_element {
+    display: inline-block !important;
+}
+
+/* Remove a barra horizontal superior */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Remove o texto "Powered by Google" e o logo */
+.goog-te-gadget span,
+.goog-logo-link,
+.goog-logo-link img,
+.goog-te-gadget img {
+    display: none !important;
+}
+
+.VIpgjd-ZVi9od-ORHbe {
+    display: none !important;
+}
+
+/* Estilização do select - COR VERDE */
+.goog-te-combo {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* Estilo personalizado */
+    background-color: #4CAF50 !important;  /* Verde principal */
+    color: white !important;
+    font-size: 14px;
+    padding: 8px 15px !important;
+    border-radius: 5px !important;
+    border: 2px solid #45a049 !important;  /* Verde mais escuro para a borda */
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    outline: none !important;
+    width: auto !important;
+    min-width: 150px !important;
+}
+
+/* Hover effect */
+.goog-te-combo:hover {
+    background-color: #45a049 !important;  /* Verde mais escuro no hover */
+    border-color: #3d8b40 !important;
+}
+
+/* Focus effect */
+.goog-te-combo:focus {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5) !important;
+}
+
+/* Estilo das opções do dropdown */
+.goog-te-combo option {
+    background-color: white !important;
+    color: #333 !important;
+    padding: 10px !important;
+}
+
+/* Remove qualquer espaço extra */
+.goog-te-gadget {
+    font-size: 0 !important;  /* Remove espaços dos elementos escondidos */
+    line-height: normal !important;
+}
